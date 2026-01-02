@@ -1,0 +1,19 @@
+/desktop.ini
+# Ignore data files
+*.csv
+*.xlsx
+*.zip
+*.parquet
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Python cache and environment
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# OS junk
+.DS_Store
+Thumbs.db
