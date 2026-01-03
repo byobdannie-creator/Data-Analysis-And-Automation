@@ -1,66 +1,26 @@
 # The Analysis
 
+## 1. What are the most in-demand skills for the top 3 popular data roles?
 
-## 1. What are the most in demand sills for the top 3 popular roles?
+To identify the most in-demand skills for the top three data roles, I filtered job postings to determine the most popular positions and then extracted the top five skills required for each role.
 
-To find the most demanded skills foer the top 3 roles, I filtred out those positions by which I got the most popular, and got the top 5 for the top 3 roles. This highlists most popular job titles and their top skills showing which skills I should pay attention on depending on my terget role. (Python For Data Analysis)
+This analysis highlights the most sought-after job titles and their key skills, helping identify which technical skills to focus on depending on a target role (Python for Data Analysis).
 
-View my notebook with details here:
-[02_Skill_Demand.ipynb](03_Projects\02_Skill_Demand.ipynb)
+View the full notebook here:  
+[02_Skill_Demand.ipynb](03_Projects/02_Skill_Demand.ipynb)
 
+---
 
-### Visualise Data
+## Visualization
 
-'''python
-fig, ax = plt.subplots(len(job_titles), 1)
+The chart below shows the likelihood of specific skills appearing in job postings for the top three data roles.
 
-sns.set_theme(style='ticks')
+![Visualization of top skills for data roles](03_Projects/skill_demand_top3_roles.png)
 
-if len(job_titles) == 1:
-    ax = [ax]
+---
 
-for i, job_title in enumerate(job_titles):
-    df_plot = (
-        df_skill_perc[df_skill_perc['job_title_short'] == job_title]
-        .head(5)
-    )
+## Insights
 
-    sns.barplot(
-        data=df_plot,
-        x='skill_percent',
-        y='job_skills',
-        ax=ax[i],
-        hue='skill_count',
-        palette='dark:r_r'
-    )
-
-    ax[i].set_title(job_title)
-    ax[i].set_xlabel('')
-    ax[i].set_ylabel('')
-    ax[i].get_legend().remove()
-    ax[i].set_xlim(0, 78)
-
-    for n, v in enumerate(df_plot['skill_percent']):
-       ax[i].text(
-        v + 1,
-        n,
-        f'{v:.0f}%',
-        va='center',
-        ha='left'
-)
-    if i != len(job_titles) -1:
-        ax[i].set_xticks([])
-
-fig.suptitle('Likelihood of Skills Demand in US Job Postings', fontsize=15)
-fig.tight_layout(h_pad=0.5)
-plt.show()
-'''
-
-##Results
-![Visualisation of top skills for data roles](03_Projects\skill_demand_top3_roles.png)
-
-# Insights
-
-- Python is a varsatile skill and highly demanded accross top 3 roles, but most prominently for Data Scientist (72%) and Data Engineers (65%)
-- SQL is the most requested skill for Data Analytics and Data Scientists with over half the job postings fot both roles. For Data Engineers, Python Is the most sought-after skill appering in 68% of job postings.
--Data Engineers requires more specialised technical skills (AWS, Azure, Spark) compared to Data Analysts and Data Scientists who are expected to be proficient in more in more general data management and analysis tools (Excel, Tableau)
+- **Python** is a versatile and highly demanded skill across all three roles, with the strongest demand among **Data Scientists (72%)** and **Data Engineers (65%)**.
+- **SQL** is the most requested skill for **Data Analysts** and **Data Scientists**, appearing in over half of job postings for both roles.
+- **Data Engineers** require more specialized technical skills such as **AWS, Azure, and Spark**, while **Data Analysts** and **Data Scientists** are expected to be proficient in more general data analysis and visualization tools like **Excel** and **Tableau**.
