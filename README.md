@@ -264,7 +264,7 @@ plt.scatter(df_DA_skills_high_demand['skill_percent'], df_DA_skills_high_demand[
 plt.show()
 ```
 
-![Most Optimal Skill For Data Analysis In The Us](03_Projects\optimal_skills_with_colourin_by_technology.png)
+![Most Optimal Skill For Data Analysis In The Us](03_Projects\optimal_skills_with_colouring_by_technology.png)
 
 This Scatter plot shows most optimal skills (high paying & high demand) for data analysts in the US
 
