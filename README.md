@@ -7,6 +7,7 @@ If you already know python, you can follow through the course using this guide e
 This is the data set I explored [Data_Jobs](https://drive.google.com/file/d/1LCqJ8an72nX11p_WXh7OnIOECEv0Vovq/view?usp=drive_link)
 
 
+
 # The Questions
 Below are the questions I want to answer in my project:
 
@@ -46,6 +47,8 @@ df.head()
 df['job_posted_date'] = pd.to_datetime(df.job_posted_date)
 df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
 
+```
+
 
 # The Analysis
 
@@ -58,7 +61,9 @@ This analysis highlights the most sought-after job titles and their key skills, 
 View the full notebook here:  
 [02_Skill_Demand.ipynb](03_Projects/02_Skill_Demand.ipynb)
 
----
+
+
+
 
 ## Visualization
 
@@ -66,7 +71,9 @@ The chart below shows the likelihood of specific skills appearing in job posting
 
 ![Visualization of top skills for data roles](03_Projects/skill_demand_top3_roles.png)
 
----
+
+
+
 
 ## Insights
 
@@ -86,13 +93,13 @@ The goal of the project is to understand **which skills appear most frequently i
 
 The analysis focuses on five commonly requested skills:
 
+
 * **SQL**
 * **Excel**
 * **Python**
 * **Tableau**
 * **Power BI**
 
----
 
 ## 🎯 Objective
 
@@ -105,7 +112,7 @@ The objectives of this project are to:
 
 This project demonstrates the ability to go from **data → visualization → insight**, which is a key expectation for junior and mid-level Data Analysts.
 
----
+
 
 ## 🧠 Key Insights
 
@@ -116,7 +123,7 @@ This project demonstrates the ability to go from **data → visualization → in
 
 **Takeaway:** SQL is a **core requirement** for Data Analyst roles at all levels.
 
----
+
 
 ### 2️⃣ Excel – Strong and Consistent Demand
 
@@ -125,7 +132,7 @@ This project demonstrates the ability to go from **data → visualization → in
 
 **Takeaway:** Excel continues to be a **foundational tool**, especially for reporting and business analysis.
 
----
+
 
 ### 3️⃣ Python – Gradual Growth
 
@@ -134,7 +141,7 @@ This project demonstrates the ability to go from **data → visualization → in
 
 **Takeaway:** Python is an important skill for analysts looking to move beyond basic reporting.
 
----
+
 
 ### 4️⃣ Tableau – Moderate but Declining Trend
 
@@ -143,7 +150,7 @@ This project demonstrates the ability to go from **data → visualization → in
 
 **Takeaway:** Visualization skills are important, but tool choice may vary by company.
 
----
+
 
 ### 5️⃣ Power BI – Stable Demand
 
@@ -152,7 +159,7 @@ This project demonstrates the ability to go from **data → visualization → in
 
 **Takeaway:** Power BI is a useful complementary skill for Data Analysts.
 
----
+
 
 ## 🛠️ Tools & Technologies
 
@@ -161,12 +168,11 @@ This project demonstrates the ability to go from **data → visualization → in
 * **Matplotlib** – data visualization
 * **Jupyter Notebook** – analysis and documentation
 
----
+
 
 ## 📈 Visualization
-'''
-python
 
+```python
 df_plot = df_DA_US_percent.iloc[:, :5]
 
 sns.lineplot(data=df_plot, dashes=False, palette='tab10')
@@ -184,27 +190,26 @@ ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
 for i in range(5):
     plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i])
 
-'''
+```
 
 ![Visulisation For Top Skill Trends](03_Projects\Skill_Trend.png)
 
----
+
 
 
 📊 View the full notebook here:  
 [03_Skills_Trend.ipynb](03_Projects/03_Skills_Trend.ipynb)
 
----
+
 
 ## 🚀 Next Steps
 
 Future improvements for this project could include:
-
 * Comparing multiple years of job market data
 * Breaking down trends by **experience level or industry**
 * Adding salary analysis alongside skill demand
 
----
+
 
 ## ✅ Conclusion
 
@@ -216,15 +221,14 @@ This project shows how Python and basic data analysis tools can be used to explo
 
 ## Salary Analysis For Data Roles
 
-'''python
+```python
 plt.title('Salary Distribution In The United States')
 plt.xlabel('Yearly Salary ($USD)')
 plt.ylabel('')
 ax = plt.gca()
 ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${x/1000:.0f}K'))
 plt.xlim(0, 600000)
-
-'''
+```
 
 ## Results 
 ![Salary Distribution Of Data Jobs In Us](03_Projects/salary_analysis.png)
@@ -254,11 +258,11 @@ Outliers show that strong skill specialization and experience can push Data Anal
 
 ### Visualisation
 
-'''python
+```python
 plt.scatter(df_DA_skills_high_demand['skill_percent'], df_DA_skills_high_demand['median_salary'])
 
 plt.show()
-'''
+```
 
 ![Most Optimal Skill For Data Analysis In The Us](03_Projects\optimal_skills_with_colourin_by_technology.png)
 
@@ -273,23 +277,30 @@ More commonly required skills like Excel and SQL have a large presence in job li
 
 Skills such as Python, Tableau, and SQL Server are towards the higher end of the salary spectrum while also being fairly common in job listings, indicating that proficiency in these tools can lead to good opportunities in data analytics.
 
+
 # What I Learned
 Throughout this project, I deepened my understanding of the data analyst job market and enhanced my technical skills in Python, especially in data manipulation and visualization. Here are a few specific things I learned:
 
 Advanced Python Usage: Utilizing libraries such as Pandas for data manipulation, Seaborn and Matplotlib for data visualization, and other libraries helped me perform complex data analysis tasks more efficiently.
 Data Cleaning Importance: I learned that thorough data cleaning and preparation are crucial before any analysis can be conducted, ensuring the accuracy of insights derived from the data.
 Strategic Skill Analysis: The project emphasized the importance of aligning one's skills with market demand. Understanding the relationship between skill demand, salary, and job availability allows for more strategic career planning in the tech industry.
-Insights
+
+
+# Insights
 This project provided several general insights into the data job market for analysts:
 
 Skill Demand and Salary Correlation: There is a clear correlation between the demand for specific skills and the salaries these skills command. Advanced and specialized skills like Python and Oracle often lead to higher salaries.
 Market Trends: There are changing trends in skill demand, highlighting the dynamic nature of the data job market. Keeping up with these trends is essential for career growth in data analytics.
 Economic Value of Skills: Understanding which skills are both in-demand and well-compensated can guide data analysts in prioritizing learning to maximize their economic returns.
+
+
 # Challenges
 This project had its challenges, but it provided good learning opportunities:
 
 Data Inconsistencies: Handling missing or inconsistent data entries requires careful consideration and thorough data-cleaning techniques to ensure the integrity of the analysis.
 Complex Data Visualization: Designing effective visual representations of complex datasets was challenging but critical for conveying insights clearly and compellingly.
 Balancing Breadth and Depth: Deciding how deeply to dive into each analysis while maintaining a broad overview of the data landscape required constant balancing to ensure comprehensive coverage without getting lost in details.
+
+
 # Conclusion
 This exploration into the data analyst job market has been incredibly informative, highlighting the critical skills and trends that shape this evolving field. The insights I got enhance my understanding and provide actionable guidance for anyone looking to advance their career in data analytics. As the market continues to change, ongoing analysis will be essential to stay ahead in data analytics. This project is a good foundation for future explorations and underscores the importance of continuous learning and adaptation in the data field.
