@@ -236,11 +236,11 @@ plt.xlim(0, 600000)
 box plot
 
 here is the barchart of the same
-![Salary Distribution Of Data Jobs In Us Barh](03_Projects\salary_analysis_barh.png)
+![Salary Distribution Of Data Jobs In Us Barh](03_Projects/salary_analysis_barh.png)
 
 
 📊 View the full notebook here:  
-[04_Skills_Analysis.ipynb](03_Projects04_Salary_Analysis.ipynb)
+[04_Skills_Analysis.ipynb](03_Projects/04_Salary_Analysis.ipynb)
 
 
 ## Insights
@@ -264,11 +264,11 @@ plt.scatter(df_DA_skills_high_demand['skill_percent'], df_DA_skills_high_demand[
 plt.show()
 ```
 
-![Most Optimal Skill For Data Analysi](03_Projects\optimal_skills_with_colouring_by_technology.png)
+![Most Optimal Skill For Data Analysis](03_Projects/optimal_skills_with_colouring_by_technology.png)
 
 This Scatter plot shows most optimal skills (high paying & high demand) for data analysts in the US
 
-See the full notebook here [05_Optimal_Skills](03_Projects\05_Optimal_Skills.ipynb)
+See the full notebook here [05_Optimal_Skills](03_Projects/05_Optimal_Skills.ipynb)
 
 # Insights:
 
